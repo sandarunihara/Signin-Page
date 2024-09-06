@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1f293a;
+}
+
+.container{
+    position: relative;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container span{
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 6px;
+    background: #2c4766;
+    border-radius: 8px;
+    transform-origin: 128px;
+    transform: scale(2.2) rotate(calc(var(--i)*(360deg/50)));
+    animation: animateBlink 3s linear infinite;
+    animation-delay: calc(var(--i)*(3s/50));
+
+}
+@keyframes animateBlink{
+    0%{
+        background: aqua;
+    }
+    25%{
+        background: #2c4766;
+    }
+}
+
+.loging-box{
+    position: absolute;
+   width: 600px;
+   height: 600px;
+   text-align: center;
+   margin-top: 150px;
+
+
+}
+
+h2{
+     font-size: 50px;
+     color: aqua;
+     text-align: center;
+     margin-top: 20px;
+}
+
+
+
+.input-box{
+    position: relative;
+    margin: 20px 0;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    
+
+}
+
+.input-box input{
+    border: 2px solid black;
+    border-radius: 20px;
+    background: transparent;
+    height: 50px;
+    width: 350px;
+    outline: none;
+    color: white;
+    font-size: 18px;
+}
+.input-box input:focus,
+.input-box input:valid{
+    border-color: aqua;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 24%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: .4s ease;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: 1px;
+    font-size: .8em;
+    background-color: #1f293a;
+    padding: 0 4px;
+    color: aqua;
+}
+
+
+.forgot-pass a{
+  text-decoration: none;
+  color: #fff;  
+  font-weight: 100;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+.btn{
+    position: relative;
+    margin: 20px 0;
+    height: 40px;
+    width: 350px;
+    border: 2px solid aqua;
+    border-radius: 20px;
+    background: aqua;
+    font-size: 20px;
+    font-weight: 500;
+}
+.btn:hover{
+    background: #fff;
+    border-color: #1f293a;
+}
+.singup-link{
+    margin-top: 10px;
+}
+.singup-link a{
+    font-size: 18px;
+    font-weight: 500;
+    color: aqua;
+    text-decoration: none; 
+    border-radius: 20px;
+    padding: 10px 40px;
+    
+    
+}
+
+.singup-link a:hover{
+    text-decoration: underline;
+    
+}
